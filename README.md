@@ -30,5 +30,5 @@ Public data analysis of Mexico's refugee/asylum system using:
 - 2026 partial data: PNT (request # 340011500000226)
 
 ## Contact
-[Your LinkedIn](https://www.linkedin.com/in/gwendolynemadrid/)
-(Portfolio link](https://sites.google.com/view/gwendolynemadridaman/projects?authuser=0)
+[LinkedIn](https://www.linkedin.com/in/gwendolynemadrid/)
+[Portfolio](https://sites.google.com/view/gwendolynemadridaman/projects?authuser=0)
