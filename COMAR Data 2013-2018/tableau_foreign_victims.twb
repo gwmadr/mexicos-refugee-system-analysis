@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0912.2314                               -->
+<workbook original-version='18.1' source-build='2025.2.3 (20252.25.0912.2314)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='working-victims_foreigners (asylum_mexico_public_data_raw (4))' inline='true' name='federated.1sotkd90upliyu15hxdt81xjd0au' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='asylum_mexico_public_data_raw (5)' name='excel-direct.0xmgn1b1umbfwg19o34nu0uipoqa'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/gjma1/Downloads/asylum_mexico_public_data_raw (5).xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0xmgn1b1umbfwg19o34nu0uipoqa' name='working-victims_foreigners' table='[&apos;working-victims_foreigners$&apos;]' type='table'>
+          <columns gridOrigin='A1:D4027:no:A1:D4027:0' header='no' outcome='6'>
+            <column datatype='string' name='F1' ordinal='0' />
+            <column datatype='integer' name='F2' ordinal='1' />
+            <column datatype='integer' name='F3' ordinal='2' />
+            <column datatype='integer' name='F4' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[working-victims_foreigners]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D4027:no:A1:D4027:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>false</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[working-victims_foreigners]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F2]</local-name>
+            <parent-name>[working-victims_foreigners]</parent-name>
+            <remote-alias>F2</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F3]</local-name>
+            <parent-name>[working-victims_foreigners]</parent-name>
+            <remote-alias>F3</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F4]</local-name>
+            <parent-name>[working-victims_foreigners]</parent-name>
+            <remote-alias>F4</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='is_reported' datatype='string' name='[Calculation_1284088880125960193]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [F4] &gt; 0 THEN &quot;Reported&quot; ELSE &quot;Not Reported&quot; END' />
+      </column>
+      <column caption='% incidents with victimas' datatype='real' name='[Calculation_1284088880989306889]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(IF [F4] &gt; 0 THEN 1 END) / COUNT(1)' />
+      </column>
+      <column caption='year' datatype='integer' datatype-customized='true' name='[F2]' role='dimension' type='quantitative' />
+      <column caption='victimas' datatype='integer' name='[F4]' role='measure' type='quantitative' />
+      <column caption='working-victims_foreigners' datatype='table' name='[__tableau_internal_object_id__].[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1284088880125960193]' derivation='None' name='[none:Calculation_1284088880125960193:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/gjma1/AppData/Local/Temp/TableauTemp/#TableauTemp_0fd0wlj0ymezjc19g7g130wdx3dq.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/10/2026 04:57:51 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>working-victims_foreigners</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F2</remote-alias>
+              <ordinal>1</ordinal>
+              <family>working-victims_foreigners</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F3</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F3</remote-alias>
+              <ordinal>2</ordinal>
+              <family>working-victims_foreigners</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F4</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F4]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F4</remote-alias>
+              <ordinal>3</ordinal>
+              <family>working-victims_foreigners</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>58</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='4027' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_1284088880125960193:nk]' type='palette'>
+            <map to='#bab0ac'>
+              <bucket>&quot;Not Reported&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Reported&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='working-victims_foreigners' id='working-victims!foreigners_FFFB755C4404497D9224942C1F4B50A0'>
+            <properties context=''>
+              <relation connection='excel-direct.0xmgn1b1umbfwg19o34nu0uipoqa' name='working-victims_foreigners' table='[&apos;working-victims_foreigners$&apos;]' type='table'>
+                <columns gridOrigin='A1:D4027:no:A1:D4027:0' header='no' outcome='6'>
+                  <column datatype='string' name='F1' ordinal='0' />
+                  <column datatype='integer' name='F2' ordinal='1' />
+                  <column datatype='integer' name='F3' ordinal='2' />
+                  <column datatype='integer' name='F4' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Reported Foreign Victims</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='working-victims_foreigners (asylum_mexico_public_data_raw (4))' name='federated.1sotkd90upliyu15hxdt81xjd0au' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sotkd90upliyu15hxdt81xjd0au'>
+            <column caption='is_reported' datatype='string' name='[Calculation_1284088880125960193]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [F4] &gt; 0 THEN &quot;Reported&quot; ELSE &quot;Not Reported&quot; END' />
+            </column>
+            <column caption='year' datatype='integer' datatype-customized='true' name='[F2]' role='dimension' type='quantitative' />
+            <column caption='victimas' datatype='integer' name='[F4]' role='measure' type='quantitative' />
+            <column-instance column='[F2]' derivation='None' name='[none:F2:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1284088880125960193]' derivation='Count' name='[pcto:cnt:Calculation_1284088880125960193:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sotkd90upliyu15hxdt81xjd0au].[none:F2:ok]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:F2:ok]' />
+              <groupfilter function='member' level='[none:F2:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1sotkd90upliyu15hxdt81xjd0au].[pcto:cnt:Calculation_1284088880125960193:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.10000000000000001' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1sotkd90upliyu15hxdt81xjd0au].[pcto:cnt:Calculation_1284088880125960193:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1sotkd90upliyu15hxdt81xjd0au].[pcto:cnt:Calculation_1284088880125960193:qk]</rows>
+        <cols>[federated.1sotkd90upliyu15hxdt81xjd0au].[none:F2:ok]</cols>
+        <percentages enabled='true' mode='row' />
+      </table>
+      <simple-id uuid='{E60AEA21-D476-40AE-AF9F-74569BCD844D}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1sotkd90upliyu15hxdt81xjd0au].[none:Calculation_1284088880125960193:nk]</field>
+            <field>[federated.1sotkd90upliyu15hxdt81xjd0au].[none:F1:nk]</field>
+            <field>[federated.1sotkd90upliyu15hxdt81xjd0au].[none:F2:qk]</field>
+            <field>[federated.1sotkd90upliyu15hxdt81xjd0au].[tyr:F2:qk]</field>
+            <field>[federated.1sotkd90upliyu15hxdt81xjd0au].[yr:F2:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2A1906E6-3E4A-48A7-A65D-2F5D33613353}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      YII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
