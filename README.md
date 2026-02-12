@@ -17,11 +17,6 @@ Public data analysis of Mexico's refugee/asylum system using:
 - Foreign victims reported: <10% annually
 - 2026 partial release: excludes adults, excludes 2018–2021, excludes 2023–2024
 
-## Files
-- `/data` – CSVs (raw + processed)
-- `/visuals` – Final charts (PNG)
-- `/tableau` – Packaged workbooks (.twbx)
-- `slides.pdf` – Full presentation
 
 ## Sources
 - COMAR: [gob.mx/comar](https://www.gob.mx/comar/articulos/boletin-estadistico-de-solicitantes-de-refugio-en-mexico-182244?idiom=es)
